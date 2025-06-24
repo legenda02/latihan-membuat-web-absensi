@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
-    --primary-color: #4CAF50; /* Green */
+    --primary-color: #4CAF50; 
     --primary-dark-color: #388E3C;
-    --secondary-color: #2196F3; /* Blue */
-    --warning-color: #FFC107; /* Amber */
-    --info-color: #00BCD4; /* Cyan */
-    --danger-color: #F44336; /* Red */
+    --secondary-color: #2196F3; 
+    --warning-color: #FFC107; 
+    --info-color: #00BCD4; 
+    --danger-color: #F44336; 
     --text-dark: #333;
     --text-light: #f9f9f9;
     --bg-light: #ffffff;
@@ -14,9 +14,9 @@
     --border-color: #e0e0e0;
     --shadow-light: rgba(0, 0, 0, 0.08);
     --shadow-medium: rgba(0, 0, 0, 0.15);
-    --blue-highlight: #1E90FF; /* Dodger Blue */
-    --gray-button: #6c757d; /* Added for back button */
-    --gray-button-dark: #5a6268; /* Added for back button hover */
+    --blue-highlight: #1E90FF; 
+    --gray-button: #6c757d; 
+    --gray-button-dark: #5a6268; 
 }
 
 body {
@@ -249,7 +249,7 @@ textarea:focus {
 }
 
 .btn-back {
-    background-color: var(--gray-button); /* Gray color for a neutral back button */
+    background-color: var(--gray-button);
     color: var(--text-light);
     padding: 14px 25px;
     border: none;
@@ -261,11 +261,11 @@ textarea:focus {
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
     width: 100%;
-    max-width: 300px; /* Limit width */
-    display: inline-flex; /* Use flex for icon and text alignment */
+    max-width: 300px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Space between icon and text */
+    gap: 10px;
     box-shadow: 0 4px 12px var(--shadow-light);
 }
 

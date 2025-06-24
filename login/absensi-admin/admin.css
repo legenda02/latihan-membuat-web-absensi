@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
-    --primary-color: maroon;/* Biru */
-    --secondary-color: #6C757D; /* Abu-abu */
-    --background-color: #F8F9FA; /* Abu-abu terang */
+    --primary-color: maroon;
+    --secondary-color: #6C757D; 
+    --background-color: #F8F9FA; 
     --card-background: #FFFFFF;
-    --text-color: #343A40; /* Hitam gelap */
+    --text-color: #343A40;
     --border-color: #DEE2E6;
-    --success-color: #28A745; /* Hijau */
-    --danger-color: #DC3545; /* Merah */
-    --warning-color: #FFC107; /* Kuning */
+    --success-color: #28A745; 
+    --danger-color: #DC3545; 
+    --warning-color: #FFC107; 
 }
 
 * {
@@ -86,7 +86,7 @@ body {
 /* Sidebar */
 .sidebar {
     grid-area: sidebar;
-    background-color: var(--text-color); /* Warna gelap untuk sidebar */
+    background-color: var(--text-color); 
     padding-top: 20px;
     color: white;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -114,19 +114,19 @@ body {
 
 .sidebar nav ul li a .fas {
     font-size: 18px;
-    width: 25px; /* Fixed width for icons */
+    width: 25px; 
     text-align: center;
 }
 
 .sidebar nav ul li:hover a,
 .sidebar nav ul li.active a {
     background-color: var(--primary-color);
-    color: white; /* Pastikan teks tetap putih saat aktif/hover */
-    border-left: 5px solid var(--warning-color); /* Contoh indikator aktif */
-    padding-left: 15px; /* Sesuaikan padding karena border kiri */
+    color: white; 
+    border-left: 5px solid var(--warning-color); 
+    padding-left: 15px; 
 }
 
-/* Main Content */
+
 .main-content {
     grid-area: main;
     padding: 30px;
@@ -142,7 +142,7 @@ body {
 }
 
 .content-section {
-    display: none; /* Sembunyikan semua section secara default */
+    display: none; 
     background-color: var(--card-background);
     padding: 25px;
     border-radius: 8px;
@@ -151,10 +151,10 @@ body {
 }
 
 .content-section.active {
-    display: block; /* Tampilkan section yang aktif */
+    display: block; 
 }
 
-/* Dashboard Stats */
+
 .dashboard-stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -187,7 +187,7 @@ body {
     font-weight: 700;
 }
 
-/* Form & Table Styles */
+
 .filter-controls, .form-group {
     display: flex;
     flex-wrap: wrap;
@@ -204,8 +204,8 @@ select {
     border: 1px solid var(--border-color);
     border-radius: 5px;
     font-size: 16px;
-    flex: 1; /* Allows inputs to grow */
-    min-width: 150px; /* Minimum width */
+    flex: 1; 
+    min-width: 150px; 
 }
 
 .btn {
@@ -240,7 +240,7 @@ select {
 }
 
 .table-responsive {
-    overflow-x: auto; /* Memungkinkan tabel di-scroll jika terlalu lebar */
+    overflow-x: auto;
 }
 
 table {
@@ -264,7 +264,7 @@ table th {
 }
 
 table tbody tr:nth-child(even) {
-    background-color: #F2F2F2; /* Warna selang-seling */
+    background-color: #F2F2F2; 
 }
 
 table tbody tr:hover {
@@ -298,7 +298,7 @@ table tbody tr:hover {
 .reject-btn { color: var(--danger-color); }
 .reject-btn:hover { background-color: rgba(220, 53, 69, 0.1); }
 
-/* Settings Group */
+
 .settings-group {
     background-color: var(--background-color);
     padding: 20px;
@@ -315,7 +315,7 @@ table tbody tr:hover {
 }
 
 .settings-group .form-group {
-    display: block; /* Agar label dan input tidak sejajar */
+    display: block; 
     margin-bottom: 15px;
 }
 
@@ -327,7 +327,7 @@ table tbody tr:hover {
 
 .settings-group input[type="text"],
 .settings-group select {
-    width: calc(100% - 22px); /* Adjust for padding/border */
+    width: calc(100% - 22px); 
     margin-right: 10px;
 }
 
@@ -349,7 +349,7 @@ table tbody tr:hover {
     border-bottom: none;
 }
 
-/* Report Options */
+
 .report-option {
     background-color: var(--card-background);
     border: 1px solid var(--border-color);
@@ -368,7 +368,7 @@ table tbody tr:hover {
     color: var(--secondary-color);
 }
 
-/* Responsiveness (Basic) */
+
 @media (max-width: 768px) {
     .container {
         grid-template-areas:
