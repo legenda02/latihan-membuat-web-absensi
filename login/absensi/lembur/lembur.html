@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absen Lembur</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link rel="stylesheet" href="lembur.css"> </head>
+<body>
+    <div class="app-container">
+        <header class="card current-info-card">
+            <div class="card-body">
+                <div class="info-tanggal">
+                    <p class="card-subtitle">Absensi Lembur Pegawai</p>
+                    <p class="current-date">Senin, 23 Juni 2025</p>
+                </div>
+                <div class="time-info">
+                    <span class="material-symbols-rounded time-icon">schedule</span>
+                    <p class="current-time">14:55:24</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="card attendance-section">
+            <div class="card-body">
+                <h3 class="card-heading">Absen Lembur Mulai</h3>
+                <button class="btn btn-primary submit-overtime-start">Submit Absen Lembur Mulai</button>
+            </div>
+        </section>
+
+        <section class="card attendance-section">
+            <div class="card-body">
+                <h3 class="card-heading">Absen Lembur Selesai</h3>
+                <p class="card-text">Keterangan pekerjaan lembur Anda:</p>
+                <textarea class="form-textarea" rows="4" placeholder="Tuliskan ringkasan pekerjaan lembur Anda hari ini..."></textarea>
+                <button class="btn btn-success submit-overtime-end">Submit Absen Lembur Selesai</button>
+            </div>
+        </section>
+
+        <section class="card overtime-table-section">
+            <div class="card-body">
+                <h2 class="section-heading">Lembur Anda Hari Ini</h2>
+                <div class="table-responsive">
+                    <table class="overtime-table">
+                        <thead>
+                            <tr>
+                                <th>Tanggal</th>
+                                <th>Jenis Lembur</th>
+                                <th>Waktu</th>
+                                <th>Keterangan Pekerjaan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2">23/06/2025</td>
+                                <td>Mulai</td>
+                                <td>14:00:00</td>
+                                <td rowspan="2">Mengerjakan laporan bulanan, persiapan presentasi direksi.</td>
+                            </tr>
+                            <tr>
+                                <td>Selesai</td>
+                                <td>17:30:00</td>
+                            </tr>
+                            <tr>
+                                <td>22/06/2025</td>
+                                <td>Mulai</td>
+                                <td>19:00:00</td>
+                                <td rowspan="2">Menyelesaikan bug pada sistem keuangan.</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Selesai</td>
+                                <td>22:00:00</td>
+                            </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="home-button-container">
+        <a href="../absensi.html" class="home-button">
+            <span class="material-symbols-rounded">home</span> Kembali Ke Beranda
+        </a>
+    </div>
+
+</body>
+</html>

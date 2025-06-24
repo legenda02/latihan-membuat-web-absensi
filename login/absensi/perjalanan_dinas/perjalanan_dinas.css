@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #2196F3; /* Blue - cocok untuk "Perjalanan Dinas" */
+    --primary-dark-color: #1976D2;
+    --accent-color: #4CAF50; /* Green - untuk success/submit */
+    --accent-dark-color: #388E3C;
+    --text-dark: #333;
+    --text-light: #f9f9f9;
+    --bg-light: #ffffff;
+    --bg-body: #f0f2f5;
+    --border-color: #e0e0e0;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    --danger-color: #F44336;
+    --gray-button: #6c757d;
+    --gray-button-dark: #5a6268;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-body);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.container {
+    width: 100%;
+    max-width: 700px; /* Lebar yang lebih baik untuk form */
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Jarak antar bagian */
+    box-sizing: border-box;
+}
+
+/* Header Halaman Form */
+.page-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color);
+    position: relative;
+}
+
+.page-header::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+.page-title {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-top: 0;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.page-title i {
+    color: var(--primary-color);
+}
+
+.page-subtitle {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 0;
+}
+
+/* Card Styling for Fieldsets */
+.card {
+    background-color: var(--bg-light);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px var(--shadow-light);
+}
+
+/* Form Sections (Fieldsets) */
+.form-section {
+    margin-bottom: 0; /* Card handles margin */
+}
+
+.section-legend {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%; /* Agar border-bottom mengisi lebar legend */
+}
+
+.section-legend i {
+    font-size: 1.1em;
+    color: var(--primary-color);
+}
+
+.field-description {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group-row .form-group {
+    flex: 1; /* Make columns take equal width */
+    margin-bottom: 0; /* Handled by row gap */
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--text-dark);
+    display: block; /* Make label a block for better spacing */
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.required {
+    color: var(--danger-color);
+    font-weight: 700;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95em;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2); /* Light blue shadow on focus */
+    outline: none;
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.file-input {
+    /* Style for file input specific aspects */
+    padding: 10px 15px; /* Adjust padding for file input */
+}
+
+.file-info-text {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Checkbox Styling */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-item input[type="checkbox"] {
+    appearance: none; /* Hide default checkbox */
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.checkbox-item input[type="checkbox"]:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.checkbox-item input[type="checkbox"]:checked::after {
+    content: '\2713'; /* Checkmark character */
+    font-size: 14px;
+    color: var(--text-light);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkbox-item label {
+    font-size: 0.95em;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+/* Submit Button */
+.submit-button {
+    background-color: var(--accent-color); /* Green for submit action */
+    color: var(--text-light);
+    padding: 16px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.15em;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    box-shadow: 0 6px 18px var(--shadow-medium);
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.submit-button i {
+    font-size: 1.2em;
+}
+
+.submit-button:hover {
+    background-color: var(--accent-dark-color);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+}
+
+/* Back to Home Button (from previous solution) */
+.back-to-home-section {
+    margin-top: 30px; /* More space for this section */
+    text-align: center;
+}
+
+.btn-back {
+    background-color: var(--gray-button);
+    color: var(--text-light);
+    padding: 14px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.05em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    max-width: 300px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px var(--shadow-light);
+}
+
+.btn-back:hover {
+    background-color: var(--gray-button-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px var(--shadow-medium);
+}
+
+.btn-back i {
+    font-size: 1.1em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        gap: 20px;
+    }
+
+    .page-title {
+        font-size: 1.8em;
+        gap: 8px;
+    }
+
+    .page-subtitle {
+        font-size: 1em;
+    }
+
+    .card {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .section-legend {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+        gap: 8px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group-row {
+        flex-direction: column; /* Stack date inputs vertically */
+        gap: 15px;
+    }
+
+    .form-label {
+        font-size: 0.9em;
+        margin-bottom: 6px;
+    }
+
+    .form-control {
+        padding: 10px 12px;
+        font-size: 0.9em;
+        border-radius: 8px;
+    }
+
+    textarea.form-control {
+        min-height: 100px;
+    }
+
+    .file-info-text {
+        font-size: 0.75em;
+    }
+
+    .checkbox-group {
+        gap: 10px;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        border-radius: 5px;
+    }
+    .checkbox-item input[type="checkbox"]:checked::after {
+        font-size: 12px;
+    }
+
+    .checkbox-item label {
+        font-size: 0.9em;
+    }
+
+    .submit-button {
+        font-size: 1.05em;
+        padding: 14px 25px;
+        gap: 8px;
+    }
+
+    .btn-back {
+        font-size: 0.95em;
+        padding: 12px 20px;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        gap: 15px;
+    }
+
+    .page-title {
+        font-size: 1.6em;
+    }
+
+    .page-subtitle {
+        font-size: 0.9em;
+    }
+
+    .card {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .section-legend {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .form-group-row {
+        gap: 10px;
+    }
+
+    .form-label {
+        font-size: 0.85em;
+        margin-bottom: 5px;
+    }
+
+    .form-control {
+        padding: 8px 10px;
+        font-size: 0.85em;
+        border-radius: 6px;
+    }
+
+    textarea.form-control {
+        min-height: 80px;
+    }
+
+    .submit-button {
+        font-size: 0.95em;
+        padding: 12px 20px;
+        gap: 6px;
+        border-radius: 8px;
+    }
+
+    .btn-back {
+        font-size: 0.9em;
+        padding: 10px 15px;
+        border-radius: 8px;
+        max-width: 200px;
+    }
+}

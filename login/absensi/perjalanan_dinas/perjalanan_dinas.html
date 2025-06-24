@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Perjalanan Dinas</title>
+    <link rel="stylesheet" href="perjalanan_dinas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <h1 class="page-title"><i class="fas fa-plane-departure"></i> Form Absensi Perjalanan Dinas</h1>
+            <p class="page-subtitle">Silakan isi data perjalanan dinas Anda dengan lengkap.</p>
+        </header>
+
+        <form class="attendance-form">
+            <fieldset class="form-section card">
+                <legend class="section-legend"><i class="fas fa-calendar-alt"></i> Periode Perjalanan Dinas</legend>
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label for="tanggalMulai" class="form-label">Tanggal Mulai <span class="required">*</span></label>
+                        <input type="date" class="form-control" id="tanggalMulai" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tanggalSelesai" class="form-label">Tanggal Selesai <span class="required">*</span></label>
+                        <input type="date" class="form-control" id="tanggalSelesai" required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section card">
+                <legend class="section-legend"><i class="fas fa-info-circle"></i> Detail Perjalanan</legend>
+                <div class="form-group">
+                    <label for="tujuanPerjalanan" class="form-label">Tujuan Perjalanan <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="tujuanPerjalanan" placeholder="Contoh: Jakarta, Surabaya, dll" required>
+                </div>
+                <div class="form-group">
+                    <label for="keteranganPerjalanan" class="form-label">Keterangan Perjalanan <span class="required">*</span></label>
+                    <textarea class="form-control" id="keteranganPerjalanan" rows="4" placeholder="Jelaskan tujuan dan kegiatan perjalanan dinas" required></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section card">
+                <legend class="section-legend"><i class="fas fa-paperclip"></i> Dokumen Pendukung</legend>
+                <div class="form-group">
+                    <label for="suratTugasDinas" class="form-label">Surat Tugas Perjalanan Dinas <span class="required">*</span></label>
+                    <input class="form-control file-input" type="file" id="suratTugasDinas" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required>
+                    <div class="file-info-text">Format: PDF, DOC, JPG (Maks. 1MB)</div>
+                </div>
+                <div class="form-group">
+                    <label for="suratTugasKomisioner" class="form-label">Surat Tugas Komisioner (Opsional)</label>
+                    <input class="form-control file-input" type="file" id="suratTugasKomisioner" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+                    <div class="file-info-text">Format: PDF, DOC, JPG (Maks. 5MB)</div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section card">
+                <legend class="section-legend"><i class="fas fa-users"></i> Komisioner yang Ikut Serta</legend>
+                <p class="field-description">Pilih komisioner yang ada dalam perjalanan dinas ini:</p>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ketuakomisioner" value="Ketua Komisioner">
+                        <label for="ketuakomisioner">Ketua Komisioner</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="anggota1" value="Anggota 1">
+                        <label for="anggota1">Anggota 1</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="anggota2" value="Anggota 2">
+                        <label for="anggota2">Anggota 2</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="anggota3" value="Anggota 3">
+                        <label for="anggota3">Anggota 3</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="anggota4" value="Anggota 4">
+                        <label for="anggota4">Anggota 4</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="submit-button primary-button"><i class="fas fa-check-circle"></i> Submit Absensi Perjalanan Dinas</button>
+        </form>
+
+        ---
+
+        <section class="back-to-home-section">
+            <a href="/login/absensi/index.html" class="btn-back">
+                <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+            </a>
+        </section>
+    </div>
+</body>
+</html>

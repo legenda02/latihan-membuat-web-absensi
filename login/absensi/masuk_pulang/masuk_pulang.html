@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absen Masuk / Pulang</title>
+    <link rel="stylesheet" href="masuk_pulang.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <div class="header-content">
+                <p class="section-title"><i class="fas fa-clipboard-list"></i> Absensi</p>
+                <p class="employee-name-header">Nama Pegawai</p>
+            </div>
+            <div class="profile-thumbnail">
+                <img src="/asset/profile.svg" alt="Profil Pegawai">
+            </div>
+        </header>
+
+        <section class="current-time-info card">
+            <div class="date-info">
+                <p class="label">Hari Ini</p>
+                <p class="date-display">Minggu, 23 Juni 2025</p>
+            </div>
+            <div class="time-display">
+                <p class="label">Jam</p>
+                <p class="current-time" id="current-time">15:35:33</p>
+            </div>
+        </section>
+
+        <section class="attendance-card card enter-attendance">
+            <h3>Absen Masuk</h3>
+            <p class="location-tag"><i class="fas fa-map-marker-alt"></i> WFO / WFA</p>
+            <button class="submit-button primary-button">Submit Absen Masuk</button>
+        </section>
+
+        <section class="attendance-card card exit-attendance">
+            <h3>Absen Pulang</h3>
+            <label for="work-description">Keterangan Pekerjaan:</label>
+            <textarea id="work-description" placeholder="Tuliskan ringkasan pekerjaan hari ini..."></textarea>
+            <button class="submit-button primary-button">Submit Absen Pulang</button>
+        </section>
+
+        ---
+
+        <section class="back-to-home-section">
+            <a href="../absensi.html" class="btn-back">
+                <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+            </a>
+        </section>
+    </div>
+
+    <script>
+        // JavaScript untuk memperbarui waktu secara real-time
+        function updateTime() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('current-time').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        // Perbarui waktu setiap detik
+        setInterval(updateTime, 1000);
+        // Panggil sekali saat halaman dimuat
+        updateTime();
+    </script>
+</body>
+</html>

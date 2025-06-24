@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasbor Admin Absensi Pegawai</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1>Absensi<span>Pegawai</span></h1>
+            </div>
+            <div class="profile">
+                <span>Halo, Admin!</span>
+                <button class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li class="active" data-section="dashboard">
+                        <a href="#"><i class="fas fa-tachometer-alt"></i> Dasbor</a>
+                    </li>
+                    <li data-section="recap">
+                        <a href="#"><i class="fas fa-calendar-alt"></i> Rekap Absensi</a>
+                    </li>
+                    <li data-section="employees">
+                        <a href="#"><i class="fas fa-users"></i> Manajemen Pegawai</a>
+                    </li>
+                    <li data-section="holidays">
+                        <a href="#"><i class="fas fa-sun"></i> Hari Libur & Cuti</a>
+                    </li>
+                    <li data-section="settings">
+                        <a href="#"><i class="fas fa-cogs"></i> Pengaturan Sistem</a>
+                    </li>
+                    <li data-section="reports">
+                        <a href="#"><i class="fas fa-chart-line"></i> Laporan</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section id="dashboard" class="content-section active">
+                <h2>Dasbor Ikhtisar</h2>
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <h3>Total Pegawai</h3>
+                        <p>150</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Hadir Hari Ini</h3>
+                        <p>125</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Cuti/Absen Hari Ini</h3>
+                        <p>10</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>% Kehadiran Bulan Ini</h3>
+                        <p>92%</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="recap" class="content-section">
+                <h2>Rekap Absensi Pegawai</h2>
+                <div class="filter-controls">
+                    <input type="date" value="2025-06-23">
+                    <input type="text" placeholder="Cari Pegawai...">
+                    <select>
+                        <option value="">Semua Status</option>
+                        <option value="hadir">Hadir</option>
+                        <option value="terlambat">Terlambat</option>
+                        <option value="izin">Izin</option>
+                        <option value="sakit">Sakit</option>
+                        <option value="cuti">Cuti</option>
+                    </select>
+                    <button class="btn">Filter</button>
+                    <button class="btn export-btn"><i class="fas fa-download"></i> Ekspor</button>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tanggal</th>
+                                <th>Nama Pegawai</th>
+                                <th>Waktu Masuk</th>
+                                <th>Waktu Keluar</th>
+                                <th>Status</th>
+                                <th>Keterangan Pekerjaan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2025-06-23</td>
+                                <td>Budi Santoso</td>
+                                <td>08:00</td>
+                                <td>17:00</td>
+                                <td>WFO</td>
+                                <td>Menyusun Laporan Bulanan</td>
+                            </tr>
+                            <tr>
+                                <td>2025-06-23</td>
+                                <td>Siti Aminah</td>
+                                <td>08:15</td>
+                                <td>17:00</td>
+                                <td>WFO</td>
+                                <td>Menyusun Data IPP</td>
+                            </tr>
+                            <tr>
+                                <td>2025-06-23</td>
+                                <td>Andi Permana</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>Cuti</td>
+                                <td>Cuti Tahunan</td>
+                            </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="employees" class="content-section">
+                <h2>Manajemen Pegawai</h2>
+                <button class="btn add-employee-btn"><i class="fas fa-plus"></i> Tambah Pegawai</button>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nama Lengkap</th>
+                                <th>NIP</th>
+                                <th>Jabatan</th>
+                                <th>Satuan Kerja</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Budi Santoso</td>
+                                <td>19857987768687</td>
+                                <td>Kasubbag</td>
+                                <td>KPU Provinsi Anambas</td>
+                                <td>
+                                    <button class="btn-action edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                                    <button class="btn-action delete-btn"><i class="fas fa-trash-alt"></i> Hapus</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Siti Aminah</td>
+                                <td>19857987768687</td>
+                                <td>Kasubbag</td>
+                                <td>KPU Provinsi Anambas</td>
+                                <td>
+                                    <button class="btn-action edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                                    <button class="btn-action delete-btn"><i class="fas fa-trash-alt"></i> Hapus</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="holidays" class="content-section">
+                <h2>Hari Libur & Cuti</h2>
+                <h3>Daftar Hari Libur Nasional</h3>
+                <button class="btn add-holiday-btn"><i class="fas fa-plus"></i> Tambah Hari Libur</button>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tanggal</th>
+                                <th>Nama Libur</th>
+                                <th>Keterangan</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2025-06-17</td>
+                                <td>Idul Adha 1446 H</td>
+                                <td>Cuti Bersama</td>
+                                <td>
+                                    <button class="btn-action edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                                    <button class="btn-action delete-btn"><i class="fas fa-trash-alt"></i> Hapus</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="settings" class="content-section">
+                <h2>Pengaturan Sistem</h2>
+                <div class="settings-group">
+                    <h3>Pengaturan Umum</h3>
+                    <div class="form-group">
+                        <label for="timezone">Zona Waktu:</label>
+                        <select id="timezone">
+                            <option>WIB (GMT+7)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="work-start">Jam Masuk Default:</label>
+                        <input type="time" id="work-start" value="08:00">
+                    </div>
+                    <div class="form-group">
+                        <label for="work-end">Jam Pulang Default:</label>
+                        <input type="time" id="work-end" value="17:00">
+                    </div>
+                    <button class="btn">Simpan Pengaturan</button>
+                </div>
+            </section>
+
+            <section id="reports" class="content-section">
+                <h2>Laporan</h2>
+                <div class="report-option">
+                    <h3>Laporan Kehadiran</h3>
+                    <p>Unduh laporan kehadiran pegawai berdasarkan periode atau departemen.</p>
+                    <button class="btn">Buat Laporan</button>
+                </div>
+                <div class="report-option">
+                    <h3>Laporan Keterlambatan</h3>
+                    <p>Lihat daftar pegawai yang sering terlambat.</p>
+                    <button class="btn">Buat Laporan</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

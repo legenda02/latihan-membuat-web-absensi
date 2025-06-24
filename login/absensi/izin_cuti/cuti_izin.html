@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Absensi Cuti/Izin</title>
+    <link rel="stylesheet" href="cuti_izin.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="form-section">
+            <h2 class="form-title">Form Absensi Cuti/Izin</h2>
+            <p class="form-description">Silakan isi data Absensi Cuti/Izin Anda dengan lengkap.</p>
+
+            <form>
+                <fieldset class="form-fieldset">
+                    <legend class="fieldset-legend">Jenis Absensi</legend>
+                    <div class="form-group">
+                        <label for="jenisAbsensi" class="form-label">Pilih Jenis Cuti/Izin <span class="required-field">*</span></label>
+                        <select class="form-control" id="jenisAbsensi" required>
+                            <option value="">Pilih...</option>
+                            <option value="cutiTahunan">Cuti Tahunan</option>
+                            <option value="cutiMelahirkan">Cuti Melahirkan</option>
+                            <option value="izinSakit">Izin Sakit</option>
+                            <option value="izinPribadi">Izin Pribadi</option>
+                            <option value="dinas">Dinas</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                    <legend class="fieldset-legend">Periode Absensi Cuti/Izin</legend>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="tanggalMulai" class="form-label">Tanggal Mulai <span class="required-field">*</span></label>
+                            <input type="date" class="form-control" id="tanggalMulai" required>
+                        </div>
+                        <div class="form-col">
+                            <label for="tanggalSelesai" class="form-label">Tanggal Selesai <span class="required-field">*</span></label>
+                            <input type="date" class="form-control" id="tanggalSelesai" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                    <legend class="fieldset-legend">Keterangan</legend>
+                    <div class="form-group">
+                        <label for="keterangan" class="form-label">Keterangan Cuti/Izin <span class="required-field">*</span></label>
+                        <textarea class="form-control" id="keterangan" rows="3" placeholder="Contoh: Cuti tahunan untuk liburan keluarga" required></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                    <legend class="fieldset-legend">Dokumen Pendukung</legend>
+                    <div class="form-group">
+                        <label for="suratPendukung" class="form-label">Surat Cuti/Izin yang sudah disetujui atasan Anda <span class="required-field">*</span></label>
+                        <input class="form-control" type="file" id="suratPendukung" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required>
+                        <div class="file-upload-info">Format: PDF, DOC, JPG/JPEG/PNG (Maks. 1MB)</div>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="submit-button">Submit Absensi Cuti/Izin</button>
+            </form>
+        </div>
+
+        <div class="form-section sisa-cuti-section">
+            <legend class="fieldset-legend">Informasi Sisa Cuti Tahunan Anda</legend>
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="table-header-main">SISA CUTI TAHUNAN</th>
+                        </tr>
+                        <tr>
+                            <th class="table-header-sub">Tahun</th>
+                            <th class="table-header-sub">Sisa (Hari)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table-cell">N-2</td>
+                            <td class="table-cell"><span class="cuti-value">7</span></td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell">N-1</td>
+                            <td class="table-cell"><span class="cuti-value">5</span></td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell">N</td>
+                            <td class="table-cell"><span class="cuti-value">12</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <section class="home-button-section">
+            <a href="../absensi.html" class="home-button">Kembali ke Beranda</a>
+        </section>
+    </div>
+</body>
+</html>
