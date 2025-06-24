@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
-    --primary-color: #4CAF50; /* Green */
+    --primary-color: #4CAF50; 
     --primary-dark-color: #388E3C;
-    --secondary-color: #2196F3; /* Blue */
-    --warning-color: #FFC107; /* Amber */
-    --info-color: #00BCD4; /* Cyan */
-    --danger-color: #F44336; /* Red */
+    --secondary-color: #2196F3; 
+    --warning-color: #FFC107; 
+    --info-color: #00BCD4; 
+    --danger-color: #F44336; 
     --text-dark: #333;
     --text-light: #f9f9f9;
     --bg-light: #ffffff;
@@ -36,14 +36,14 @@ body {
     border-radius: 15px;
     box-shadow: 0 8px 30px var(--shadow-light);
     width: 100%;
-    max-width: 700px; /* Increased max-width for better layout */
+    max-width: 700px; 
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Space between sections */
+    gap: 30px; 
 }
 
-/* Header Section */
+
 header {
     display: flex;
     align-items: center;
@@ -68,7 +68,7 @@ header {
     overflow: hidden;
     flex-shrink: 0;
     box-shadow: 0 4px 10px var(--shadow-light);
-    border: 3px solid var(--primary-color); /* Add a border */
+    border: 3px solid var(--primary-color); 
 }
 
 .profile-image img {
@@ -131,7 +131,7 @@ h2::after {
     border-radius: 5px;
 }
 
-/* Table Styles */
+
 .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -142,10 +142,10 @@ h2::after {
 
 table {
     width: 100%;
-    border-collapse: separate; /* Use separate to apply border-radius */
-    border-spacing: 0; /* Remove space between cells */
+    border-collapse: separate; 
+    border-spacing: 0; 
     font-size: 0.9em;
-    min-width: 600px; /* Ensure table is wide enough to scroll on small screens */
+    min-width: 600px; 
 }
 
 table thead th {
@@ -154,7 +154,7 @@ table thead th {
     font-weight: 600;
     padding: 12px 15px;
     text-align: center;
-    position: sticky; /* Make headers sticky for better UX with scrolling */
+    position: sticky; 
     top: 0;
     z-index: 10;
 }
@@ -177,7 +177,7 @@ table tbody tr:hover {
 }
 
 .status-wfo {
-    background-color: #e8f5e9; /* Light green for WFO */
+    background-color: #e8f5e9; 
     color: #2e7d32;
     font-weight: 600;
     border-radius: 5px;
@@ -185,7 +185,7 @@ table tbody tr:hover {
 }
 
 .status-wfa {
-    background-color: #e3f2fd; /* Light blue for WFA */
+    background-color: #e3f2fd; 
     color: #1976d2;
     font-weight: 600;
     border-radius: 5px;
@@ -196,10 +196,10 @@ table tbody tr:hover {
     white-space: normal;
     word-break: break-word;
     text-align: left;
-    max-width: 250px; /* Limit width to improve readability */
+    max-width: 250px; 
 }
 
-/* Button Group Styles */
+
 .action-buttons {
     text-align: center;
 }
@@ -226,7 +226,7 @@ table tbody tr:hover {
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px var(--shadow-light);
-    color: var(--text-light); /* Default text color for buttons */
+    color: var(--text-light); 
 }
 
 .btn i {
@@ -249,25 +249,25 @@ table tbody tr:hover {
     background-color: var(--secondary-color);
 }
 .secondary-btn:hover {
-    background-color: #1976d2; /* Darker blue */
+    background-color: #1976d2;
 }
 
 .warning-btn {
     background-color: var(--warning-color);
-    color: var(--text-dark); /* Darker text for warning */
+    color: var(--text-dark); 
 }
 .warning-btn:hover {
-    background-color: #FFA000; /* Darker amber */
+    background-color: #FFA000; 
 }
 
 .info-btn {
     background-color: var(--info-color);
 }
 .info-btn:hover {
-    background-color: #0097A7; /* Darker cyan */
+    background-color: #0097A7; 
 }
 
-/* Logout Button */
+
 .logout-section {
     margin-top: 40px;
     text-align: center;
@@ -276,15 +276,15 @@ table tbody tr:hover {
 .logout-btn {
     background-color: var(--danger-color);
     width: 100%;
-    max-width: 300px; /* Make logout button a bit smaller */
+    max-width: 300px; 
     margin: 0 auto;
 }
 
 .logout-btn:hover {
-    background-color: #D32F2F; /* Darker red */
+    background-color: #D32F2F; 
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
     .container {
         padding: 20px;
@@ -337,7 +337,7 @@ table tbody tr:hover {
     }
 
     .button-grid {
-        grid-template-columns: 1fr; /* Stack buttons vertically on small screens */
+        grid-template-columns: 1fr; 
     }
 
     .btn {
@@ -369,7 +369,7 @@ table tbody tr:hover {
     }
 
     table {
-        min-width: 450px; /* Allow scrolling for very small screens */
+        min-width: 450px; 
     }
 
     .logout-btn {

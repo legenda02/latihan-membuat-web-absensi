@@ -6,7 +6,6 @@
     <title>Absen Lembur</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
-    <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="lembur.css"> 
 </head>
 <body>
@@ -54,7 +53,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Existing rows for demonstration -->
                             <tr>
                                 <td rowspan="2">23/06/2025</td>
                                 <td>Mulai</td>
@@ -76,7 +74,6 @@
                                 <td>Selesai</td>
                                 <td>22:00:00</td>
                             </tr>
-                            <!-- New overtime entries will be added here by JavaScript -->
                         </tbody>
                     </table>
                 </div>
@@ -157,7 +154,7 @@
                     <td rowspan="2">${dateString}</td>
                     <td>Mulai</td>
                     <td>${timeString}</td>
-                    <td rowspan="2"></td> <!-- Placeholder for description, filled on end -->
+                    <td rowspan="2"></td>
                 `;
                 // Store a reference to the description cell for later update
                 currentOvertimeSession.descriptionCell = newRowStart.cells[3];
@@ -228,7 +225,6 @@
         });
     </script>
 
-    <!-- Custom message box styling -->
     <style>
         .custom-message-box {
             position: fixed;
